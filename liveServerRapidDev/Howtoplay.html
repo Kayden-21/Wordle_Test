@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>How to play</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="Howtoplay.css">
+	<link rel="stylesheet" href="allStyles.css">
+    <script src="./howToPlay.js" defer></script>
+</head>
+<body>
+    <main>
+        <img src="./wordleLogoLightMode.svg">
+
+    <section class="instrusctions">
+        <h1>How to play</h1>
+        <h2>Guess the wordle in 5 tries.</h2>
+        <ul>
+            <li>Each guess must be a avalid 5 letter word.</li>
+            <li>The colour of the tiles will change to show you how close your guess was to the word.</li>
+        </ul>
+        <section class="visual-instructions">
+
+    <section class="Examples">
+        <h2>Examples:</h2>
+     <article class="boxes">
+        <p class="green-box">W</p>
+        
+        <p class="box">E</p>
+        
+        <p class="box">A</p>
+        
+        <p class="box">R</p>
+        
+        <p class="box">Y</p>
+     </article>
+     <p><strong>W</strong> is in the word and in the correct spot.</p>
+     <article class="boxes">
+        <p class="box">A</p>
+        
+        <p class="yellow-box">G</p>
+        
+        <p class="box">I</p>
+        
+        <p class="box">L</p>
+        
+        <p class="box">E</p>
+     </article>
+     <p><strong>G</strong> is in the word but in the incorrect spot.</p>
+     <article class="boxes">
+        <p class="box">L</p>
+        
+        <p class="box">O</p>
+        
+        <p class="box">A</p>
+        
+        <p class="box">N</p>
+        
+        <p class="box">S</p>
+     </article>
+     <p><strong>A</strong> is not in the word in any spot.</p>
+    </section>
+</section>
+
+    <section class="rules">
+        <ul>
+            <li>A new wordle is released daily.</li>
+            <li>Once you have played the worlde of the day, there is not a second chance.</li>
+            <li>Score is based on the amount of time it took to guess the wordle correctly.</li>
+        </ul>
+    </section>
+    <section id="playbutton">
+        <button onclick="redirectToPage()" id = "toGame" type="button" class="play-button">Play the Wordle</button>
+    </section>
+    
+</main>
+</body>
+</html>

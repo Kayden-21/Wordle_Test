@@ -1,0 +1,211 @@
+:root {
+  --colorToggleSVG: url("lightModeIcon.svg");
+  --soundToggleSVG: url("soundOn.svg");
+  --wordleLogo: url("wordleLogoLightMode.svg");
+  --backspaceIcon: url("backspaceIconLightMode.svg");
+  --brightnessValue: 0.8;
+  --gridSize: 5;
+  --validityBGCol: #c8891b;
+}
+
+body{
+  background-color: var(--plainBackground);
+  background-color: #232323;
+  color: var(--defaultFont);
+}
+
+#mainHolder {
+  background-color: var(--bigBackground);
+  aspect-ratio: 0.5;
+  display: grid;
+  grid-template-rows: 1.5fr 1.5fr 7fr 1.5fr 4fr;
+  margin: 1vw;
+  grid-template-columns: 2fr 8fr 2fr;
+  max-height: 98vh;
+  min-width: 350px;
+  min-height: 650px;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-column-start: 2;
+  grid-column-end: 2;
+  background-image: var(--wordleLogo);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.functionButtons {
+
+  width: 100%;
+  height: 100%;
+
+}
+
+.iconButton{
+  border: none;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 75% 75%;
+}
+
+#colorToggle {
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row: 1;
+  background-image: var(--colorToggleSVG);
+}
+
+#timeCount{
+  grid-column: 2;
+  grid-row: 2;
+  text-align: center;
+  color: var(--timerFontColor);
+  width: fit-content;
+  height:  fit-content;
+  margin: auto;
+}
+
+#displayBoard{
+  display: grid;
+  width: 92%;
+  height: 100%;
+  grid-column: 1/4;
+  grid-row: 3;
+  margin: 0 4%;
+  gap: 1vw;
+  grid-template-columns: repeat(var( --gridSize), 1fr);
+  grid-template-rows: repeat(var( --gridSize), 1fr);
+}
+
+.smallRound{
+  border-radius: 2vh;
+}
+
+.gridItem{
+  display: flex;
+  background-color: var(--emptyInputBGColor);
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+#enterButton{
+  grid-column: 1/4;
+  grid-row: 4;
+  margin: 2% 10%;
+  background-color: var(--enterBackground);
+  color: var(--buttonFontColor);
+  border: none;
+  font-size: 5vh;
+
+}
+
+#keyboardContainer{
+  display: flex;
+  grid-row: 5;
+  grid-column: 1/4;
+  flex-direction: column;
+  gap: 3%;
+}
+
+.keyRow{
+  display: flex;
+  width: 100%;
+  height: 25%;
+  justify-content: center;
+  gap: 1.5%;
+}
+
+#buttonBackSpace{
+  background-image: var(--backspaceIcon);
+  background-color: var(--backButtonBC);
+  padding: 0 3%;
+}
+
+key-button{
+  display: flex;
+  font-size: 4vh;
+  background-color: var(--defaultButtonBGColor);
+  align-items: center;
+  justify-content: center;
+  color: var(--defaultFont);
+  width: 8%;
+  border-radius: 0.75vh;
+  cursor: pointer;
+}
+
+.completelyCorrect{
+  background-color:  var(--completeCorrect);
+}
+
+.correctLetterWrongPlace{
+  background-color:  var(--semiCorrect);
+}
+
+.completelyWrong{
+  background-color:  var(--wrong);
+}
+
+.currentlySelected {
+  filter: brightness(var(--brightnessValue));
+}
+
+#validIndicator{
+  aspect-ratio: 1/1;
+  grid-row: 2;
+  grid-column: 3;
+  width: 100%;
+  /* background-color: rebeccapurple; */
+  margin: auto; 
+}
+
+circle{
+  r: 25%;
+  cy: 50%;
+  cx: 26%;
+  fill: var(--validityBGCol);
+  stroke: var(--defaultFont);
+}
+
+ @media only screen and (max-width: 600px) {
+
+  #mainHolder {
+    width: 95vw;
+  }
+
+  #displayBoard{
+    gap: 2vw;
+  }
+
+  #timeCount{
+    font-size: 1.5rem;
+  }
+
+  .gridItem {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+
+  #mainHolder {
+    height: 95vh;
+  }
+
+  #displayBoard{
+    gap: 0.5vw;
+  }
+
+  #timeCount{
+    font-size: 1.5rem;
+  }
+
+  .gridItem {
+    font-size: 2rem;
+  }
+}

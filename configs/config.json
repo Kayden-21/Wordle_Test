@@ -1,0 +1,17 @@
+{
+    "server": {
+      "port": 3000
+    },
+    "database": "Driver={ODBC Driver 17 for SQL Server};Server=wordle-db.c68ft3jbsleb.eu-west-1.rds.amazonaws.com;Database=WordleApp;Uid=admin;Pwd=admin1234;",
+    "databaseTedious": "Server=wordle-db.c68ft3jbsleb.eu-west-1.rds.amazonaws.com;Database=WordleApp;User Id=admin;Password=admin1234;",
+    "google": {
+      "clientID": "1014783924932-cvq26bk7cd6dfmjepflgm5f5h7jjpej6.apps.googleusercontent.com",
+      "clientSecret": "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",
+      "callbackURLdeployement": "https://wordle-game.azurewebsites.net/auth/google/callback",
+      "localcallbackURLdeployement":"http://localhost:3000/auth/google/callback"
+    },
+    "developerMode":{
+      "noAuth":false
+    },
+    "localDebug": false
+}

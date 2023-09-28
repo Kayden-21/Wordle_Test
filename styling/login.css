@@ -1,0 +1,113 @@
+:root{
+  --displaceSize: 1vh;
+}
+
+button{
+  padding: 2vw 3vw;
+  font-size: 2em;
+  /* color: white; */
+  background-color: var(--completeCorrect);
+  animation: buttonGrow 2s ease forwards;
+}
+
+button:hover{
+  transform: scale(1.2) translateY( calc(var(--displaceSize)*-1) );
+  box-shadow: lime  var(--displaceSize) var(--displaceSize) var(--displaceSize) ;
+
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 40vh;
+}
+
+h1{
+  color: var(--backButtonBC);
+  font-size: 5em;
+}
+
+path{
+  stroke: white;
+  fill: var(--activeInputBlockBGColor);
+  stroke-width: 1;
+  stroke-dasharray: 250;
+}
+
+
+svg{
+  width: 40vw;
+  aspect-ratio: 0.2;
+  stroke-dashoffset: 0;
+  animation: hideshow 2s ease, svgDropIn 2s ease;
+}
+
+body{
+  background-color: var(--plainBackground);
+  background-color: #232323;
+  color: var(--defaultFont);
+}
+
+@keyframes hideshow {
+  0% {
+    opacity: 0;
+  }
+
+  70% {
+    opacity: 0.8;
+  }
+
+  75% {
+    opacity: 0.5;
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+  85% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes drawLogo {
+  0%{
+    stroke-dasharray: 5;
+  }
+  100% {
+    stroke-dasharray: 500;
+  }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 250;
+  }
+  100% {
+    stroke-dashoffset: 1000;
+  }
+}
+
+@keyframes svgDropIn {
+  0% {
+    transform: translateY(-50vh);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes buttonGrow {
+  0% {
+    transform: scale(0.5) translateY(50vh);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

@@ -1,0 +1,40 @@
+@import url('https://fonts.cdnfonts.com/css/satoshi');
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Satoshi';
+  transition: 0.75s;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+:root{
+  --plainBackground: #777575;
+  --bigBackground: #F2F8F8;
+  --buttonFontColor:white;
+  --completeCorrect: #53e485;
+  --semiCorrect: #efde45;
+  --wrong: #6b7378;
+  --wrongFontColor: #C4CED8;
+  --enterBackground: #639999;
+  --defaultFont: black;
+  --borderRadius: 20px;
+  --svgColor: green;
+  --backButtonBC:#95CACA;
+  --timerFontColor: #343434;
+  --emptyInputBGColor: #C4CED8;
+  --defaultButtonBGColor: #C4CED8;
+  --activeInputBlockBGColor: #454545;
+  --leaderBoardBGColor: #047575;
+  --leaderBoardFontColor: white;
+  --rankingNumberBGColor: #109999;
+}
+
+.round{
+  border-radius: var(--borderRadius);
+}

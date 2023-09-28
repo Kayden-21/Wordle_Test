@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Highscore</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./highscore.css">
+	<link rel="stylesheet" href="./allStyles.css">
+	<script type="module" src="./highscorePage.js" defer></script>
+</head>
+<body>
+	<main class="round">
+	<section class="highscore">
+		<img src="./WinnerIcon.svg" id="outcomeIcon" alt="Winner Icon">
+		<h1 id="resultMessage">You got it!</h1>
+
+		<article class="boxes" id="correctWordDisplay">
+			<p class="green-box"></p>
+			<p class="green-box"></p>
+			<p class="green-box"></p>
+			<p class="green-box"></p>
+			<p class="green-box"></p>
+		</article>
+		<button class="highscore-button">View my Answers</button>
+
+		<section class="statistics">
+			<h3>Your Statistics</h3>
+			<hr class="stats-underline">
+			<article class="time-header">
+				<img src="./timeIcon.svg" alt="Timer">
+				<p>Time</p>
+			</article>
+			<article class="time">
+				<p>69:420</p>
+			</article>
+		</section>
+	</section>
+	<section class="leaderboard">
+		<h2>Leaderboard</h2>
+		<table id="scoreBoard" cellspacing="0">
+			<tr>
+				<th id="rankColumn">Rank</th>
+				<th id="nameColumn">Name</th>
+				<th id="timeColumn">
+					<img src="./timeIcon.svg" alt="Timer">
+					Time
+				</th>
+			</tr>
+			<tr id="userRow">
+				<td>#</td>
+				<td>Your name</td>
+				<td>Your time</td>
+			</tr>
+		</table>
+	</section>
+	</main>
+</body>
+</html>
