@@ -39,4 +39,4 @@ async function getActiveEvent(){
   }
 }
 
-module.exports = {createNewEvent, getActiveEvent};
+module.exports = {createNewEvent, getActiveEvent, getWord};
