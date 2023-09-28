@@ -1,16 +1,13 @@
 const axios = require('axios');
-const { createNewEvent, getActiveEvent, getWord } = require('../../routes/Utility/wordUtils'); // Replace with your module name
+const { createNewEvent, getActiveEvent, getWord } = require('../../routes/Utility/wordUtils');
 const DB = require('../../routes/Utility/dbUtils');
 
-// Mocking axios
 jest.mock('axios');
 
-// Mocking DB
 DB.executeQuery = jest.fn();
 
 describe('Integration tests', () => {
   beforeEach(() => {
-    // Clear all instances and calls to constructor and all methods:
     jest.clearAllMocks();
   });
 
