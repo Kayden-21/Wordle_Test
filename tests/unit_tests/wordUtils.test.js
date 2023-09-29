@@ -1,5 +1,5 @@
 const axios = require('axios');
-const { createNewEvent, getActiveEvent, getWord } = require('../../routes/Utility/wordUtils'); // Import getWord along with other functions
+const { createNewEvent, getActiveEvent, getWord } = require('../../routes/Utility/wordUtils');
 const DB = require('../../routes/Utility/dbUtils');
 
 jest.mock('axios');
